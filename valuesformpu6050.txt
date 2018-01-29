@@ -1,0 +1,22 @@
+(everything is in decimal system).
+
+send 129 to register 107 (pwr_mgmnt 1 -- clk source tox axis gyro and device reset), and wait 100ms.
+send 7 to register 104 (signal path reset), and wait for 100ms. 
+send 3 to register 26 -----> DLPF (44 Hz).
+send 16 to register 27 (gyro full range 1000 deg/s & 32.8 LSB/(deg/s)).
+send 16 to register 28 (acc full range 8g & 4096 LSB/g).
+
+-----------------check register 104 (signal path reset).
+-----------------check register 106 bit 0 (SIG_COND_RESET).
+
+
+accl measurements start from:
+59 60 x
+61 62 y
+63 64 z
+gyro measurements start from:
+67 68 x
+69 70 y
+71 72 z
+temp measurements start from:
+65 66
